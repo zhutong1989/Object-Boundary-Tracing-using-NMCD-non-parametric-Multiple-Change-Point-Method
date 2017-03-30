@@ -10,3 +10,6 @@
 －The folder images lists all the 7 images I tried (before and after object boundary detection)   <br />
 －The folder Image Pixel Data lists all the pixel data for the 7 images read from Matlab          <br />
 －The folder References lists three papers -- the NMCD method, Intro to Contour Tracing Problem and Boundary Estimation Theories　<br />
+-The code folder has two subfolders    <br /> 
+  -The Functions subfolder lists R codes for pre-screening procedure for the most significant possible change-points    <br />
+  -The Implementations subfolder lists R codes for searching for the 1-change-point, 2-change-point images and also boundary detection in smaller segmentations    <br />

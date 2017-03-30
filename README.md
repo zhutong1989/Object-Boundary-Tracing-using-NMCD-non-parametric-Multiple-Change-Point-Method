@@ -11,8 +11,8 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
                             
    In the context of (1.1), we can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper in the reference folder):                                      
                         
-         Lu(τ′1 , . . . , τ′L) = sum_from_k=0_to_L(τ′k+1 − τ′k) * {F_hat_from_τ′k_to_τ′k+1(u) * log(F_hat_from_τ′k_to_τ′k+1(u)) +
-                                   (1 - F_hat_from_τ′k_to_τ′k+1(u)) * log(1 - F_hat_from_τ′k_to_τ′k+1(u))                  
+         Lu(τ′1 , . . . , τ′L) = sum_from_k=0_to_L(τ′k+1 − τ′k) * {F_hat_from_τ′k_to_τ′k+1(u) * log(F_hat_from_τ′k_to_τ′k+1(u)) +         
+ 　                                 (1 - F_hat_from_τ′k_to_τ′k+1(u)) * log(1 - F_hat_from_τ′k_to_τ′k+1(u))                
                                     
    where F_hat_from_τ′k_to_τ′k+1(u) is the empirical C.D.F. of the subsample {Xτ′k,...,Xτ′k+1 - 1} with Xτ′0 = 1 and Xτ′L+1 = n + 1
    To estimate the change-points 1 < τ′1 < ··· <τ′L ≤ n, we can maximize the log-likelihood above in an integrated form:      

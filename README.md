@@ -9,7 +9,7 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
    
                             n * {Fn_hat(u) * log(Fn_hat(u)) + (1−Fn_hat(u)) * log(1−Fn_hat(u))}　                           
                              
-    We can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper 　　in the reference folder):                                      
+    We can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper 　　in the reference folder):                                                                                                              
                         
          Lu(τ′1 , . . . , τ′L) = sum_from_k=0_to_L(τ′k+1 − τ′k) * {F_hat_from_τ′k_to_τ′k+1(u) * log(F_hat_from_τ′k_to_τ′k+1(u)) +         
  　                                 (1 - F_hat_from_τ′k_to_τ′k+1(u)) * log(1 - F_hat_from_τ′k_to_τ′k+1(u))                
@@ -21,7 +21,7 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
                                                                               
    where w(·) is some positive weight function so that Rn(·) is finite, and theintegral is used to combine all the information across u.                                                                                   
              
--Folder Description
+-Folder Description                                                                                      
  -The folder images lists all the 7 images I tried (before and after object boundary detection) 
  -The folder Image Pixel Data lists all the pixel data for the 7 images read from Matlab                
  -The folder References lists three papers -- the NMCD method, Intro to Contour Tracing Problem and Boundary Estimation Theories

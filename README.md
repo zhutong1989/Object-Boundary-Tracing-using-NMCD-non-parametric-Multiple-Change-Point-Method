@@ -13,3 +13,4 @@
 -The code folder has two subfolders    <br /> 
   -The Functions subfolder lists R codes for pre-screening procedure for the most significant possible change-points    <br />
   -The Implementations subfolder lists R codes for searching for the 1-change-point, 2-change-point images and also boundary detection in smaller segmentations    <br />
+  -The Add-points subfolder lists the R codes for adding points onto specific directions, so that they can be used to add points in the directions with less detected points by choosing different initial points inside the pictures, this approach was designed to get a ideal result pictures with different shapes.

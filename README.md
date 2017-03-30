@@ -5,21 +5,21 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
 -Methodology
 1. NMCD method. 
    Assume that Z1, . . . ,Zn are independent and identically distributed from F0, and let Fn_hat denote the empirical C.D.F. of the
-   sample, then n*Fn_hat(u) ∼ Binomial(n,F0(u)). If we regard the sample as binary data with the probability of success b Fn(u), this        leads to the nonparametric maximum log-likelihood:  
+   sample, then n*Fn_hat(u) ∼ Binomial(n,F0(u)). If we regard the sample as binary data with the probability of success b Fn(u), this        leads to the nonparametric maximum log-likelihood:                                     
    
-                            n * {Fn_hat(u) * log(Fn_hat(u)) + (1−Fn_hat(u)) * log(1−Fn_hat(u))}　
+                            n * {Fn_hat(u) * log(Fn_hat(u)) + (1−Fn_hat(u)) * log(1−Fn_hat(u))}　                           
                             
-   In the context of (1.1), we can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper in the reference folder):
-   
+   In the context of (1.1), we can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper in the reference folder):                                      
+                        
          Lu(τ′1 , . . . , τ′L) = sum_from_k=0_to_L(τ′k+1 − τ′k) * {F_hat_from_τ′k_to_τ′k+1(u) * log(F_hat_from_τ′k_to_τ′k+1(u)) +
-                                   (1 - F_hat_from_τ′k_to_τ′k+1(u)) * log(1 - F_hat_from_τ′k_to_τ′k+1(u))
-                                   
+                                   (1 - F_hat_from_τ′k_to_τ′k+1(u)) * log(1 - F_hat_from_τ′k_to_τ′k+1(u))                  
+                                    
    where F_hat_from_τ′k_to_τ′k+1(u) is the empirical C.D.F. of the subsample {Xτ′k,...,Xτ′k+1 - 1} with Xτ′0 = 1 and Xτ′L+1 = n + 1
-   To estimate the change-points 1 < τ′1 < ··· <τ′L ≤ n, we can maximize the log-likelihood above in an integrated form:
-   
+   To estimate the change-points 1 < τ′1 < ··· <τ′L ≤ n, we can maximize the log-likelihood above in an integrated form:      
+                                    
              Rn(τ′1, . . . , τ′L) = integration_from_NegativeInfinity_to_PositiveInfinity Lu(τ′1, . . . , τ′L) *　dw(u)　　
-             
-   where w(·) is some positive weight function so that Rn(·) is finite, and theintegral is used to combine all the information across u.          
+                                                                              
+   where w(·) is some positive weight function so that Rn(·) is finite, and theintegral is used to combine all the information across u.                                                                                   
              
 -Folder Description
  -The folder images lists all the 7 images I tried (before and after object boundary detection) 

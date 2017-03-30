@@ -8,7 +8,7 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
    sample, then n*Fn_hat(u) ∼ Binomial(n,F0(u)). If we regard the sample as binary data with the probability of success b Fn(u), this        leads to the nonparametric maximum log-likelihood:                                     
    
                             n * {Fn_hat(u) * log(Fn_hat(u)) + (1−Fn_hat(u)) * log(1−Fn_hat(u))}　                           
-                             
+                                                                                                                                 
     We can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper 　　in the reference folder):                                                                                                              
                         
          Lu(τ′1 , . . . , τ′L) = sum_from_k=0_to_L(τ′k+1 − τ′k) * {F_hat_from_τ′k_to_τ′k+1(u) * log(F_hat_from_τ′k_to_τ′k+1(u)) +         

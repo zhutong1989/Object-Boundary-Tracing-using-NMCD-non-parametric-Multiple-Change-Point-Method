@@ -5,7 +5,7 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
 -Methodology
 1. NMCD method. 
    Assume that Z1, . . . ,Zn are independent and identically distributed from F0, and let Fn_hat denote the empirical C.D.F. of the
-   sample, then n*Fn_hat(u) ∼ Binomial(n,F0(u)). If we regard the sample as binary data with the probability of success b Fn(u), this        leads to the nonparametric maximum log-likelihood:                                     
+   sample, then n*Fn_hat(u) ∼ Binomial(n,F0(u)). If we regard the sample as binary data with the probability of success b Fn(u), this        leads to the nonparametric maximum log-likelihood:                                                                                         
    
                             n * {Fn_hat(u) * log(Fn_hat(u)) + (1−Fn_hat(u)) * log(1−Fn_hat(u))}　                           
                                                                                                                                  

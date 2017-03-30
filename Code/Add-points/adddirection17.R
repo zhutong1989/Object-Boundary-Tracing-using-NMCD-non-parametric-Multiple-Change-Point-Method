@@ -1,0 +1,104 @@
+adddirection17<-function(img,istart,jstart,d=0){
+    row<-nrow(img)
+    col<-ncol(img)
+    source("D:\\R-3.0.1\\~My work place~\\snake\\Programs\\Tools\\screening.R")
+    source("D:\\R-3.0.1\\~My work place~\\snake\\Programs\\Tools\\calculate1.R")
+    source("D:\\R-3.0.1\\~My work place~\\snake\\Programs\\Tools\\calculate2.R")
+    maxadd17<-0
+    { 
+     imaxadd17<-0
+     jmaxadd17<-0
+     imax171i<-0
+     jmax171i<-0
+     imax172i<-0
+     jmax172i<-0
+     max1<-0
+     max2<-0
+     s17<-0
+     i<-0
+     while((istart+i<=row)&&(jstart+3*i<=col)){  
+         s17[i+1]<-img[istart+i,jstart+3*i]
+         i<-i+1
+     }
+     n<-length(s17)
+     screening(n,s17)
+     O<-0
+     O<-screening(n,s17)$O
+     nO<-screening(n,s17)$nO
+     zeta<-((log(n))^2)/2 
+     {                                                                                    
+      calculate1(s17,n,O,nO,istart,jstart)                                                   
+      NMCD<-calculate1(s17,n,O,nO,istart,jstart)$NMCD
+      NMCD1<-matrix(0,nrow=nO)
+      for(a in 1:nO){                                                                         
+          if(NMCD[a]!=0)
+              NMCD1[a]<-1/NMCD[a]
+          else
+              NMCD1[a]<-NMCD[a]
+      }
+      cp1<-which(NMCD1==min(NMCD1))
+      imax171i<-istart+O[cp1]-1
+      jmax171i<-jstart+3*O[cp1]-3
+      max1<-NMCD[cp1]
+     }
+     if(d!=1)
+     {
+      calculate2(s17,n,O,nO,istart,jstart)                                                    
+      NMCD2<-calculate2(s17,n,O,nO,istart,jstart)$NMCD2
+      NMCD21<-matrix(0,nrow=nO,ncol=nO,byrow=T)
+      for(a in 1:nO)
+          for(b in 1:nO){
+              if(NMCD2[a,b]!=0)
+                  NMCD21[a,b]<-1/NMCD2[a,b]
+              else
+                  NMCD21[a,b]<-NMCD2[a,b]
+      }
+      summax<-which(NMCD21==min(NMCD21))
+      cp1<-summax%%(nO)
+      cp2<-summax%/%(nO)+1
+      imax172i<-istart+O[cp1]-1
+      jmax172i<-jstart+3*O[cp1]-3
+      imax172i[2]<-istart+O[cp2]-1
+      jmax172i[2]<-jstart+3*O[cp2]-3
+      max2<-NMCD2[cp1,cp2]
+     }
+     if(d==1)
+     {
+      imaxadd17<-imax171i
+      jmaxadd17<-jmax171i
+      maxadd17<-max1
+      points(jmaxadd17,row-imaxadd17,pch="。",col="red")
+     }
+     else if(d==2)
+     {
+      imaxadd17<-imax172i[1]
+      jmaxadd17<-jmax172i[1]
+      imaxadd17[2]<-imax172i[2]
+      jmaxadd17[2]<-jmax172i[2]
+      maxadd17<-max2
+      points(jmaxadd17[1],row-imaxadd17[1],pch="。",col="red")
+      points(jmaxadd17[2],row-imaxadd17[2],pch="。",col="purple")
+     }
+     else   
+     {
+      min<-min((-max1+zeta),(-max2+2*zeta))
+      if(min==(-max1+zeta))
+      { 
+       imaxadd17<-imax171i
+       jmaxadd17<-jmax171i
+       maxadd17<-max1
+       points(jmaxadd17,row-imaxadd17,pch="。",col="red")
+      } 
+      else if(min==(-max2+2*zeta))
+      {
+       imaxadd17<-imax172i[1]
+       jmaxadd17<-jmax172i[1]
+       imaxadd17[2]<-imax172i[2]
+       jmaxadd17[2]<-jmax172i[2]
+       maxadd17<-max2
+       points(jmaxadd17[1],row-imaxadd17[1],pch="。",col="red")
+       points(jmaxadd17[2],row-imaxadd17[2],pch="。",col="purple")
+      }
+     } 
+    }
+}

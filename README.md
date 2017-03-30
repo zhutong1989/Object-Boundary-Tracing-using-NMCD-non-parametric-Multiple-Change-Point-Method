@@ -8,8 +8,8 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
    sample, then n*Fn_hat(u) ∼ Binomial(n,F0(u)). If we regard the sample as binary data with the probability of success b Fn(u), this        leads to the nonparametric maximum log-likelihood:                                     
    
                             n * {Fn_hat(u) * log(Fn_hat(u)) + (1−Fn_hat(u)) * log(1−Fn_hat(u))}　                           
-                            
-   In the context of (1.1), we can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper in the reference folder):                                      
+                             
+    We can write the joint log-likelihood for a candidate set of change-points (τ′1 < ··· < τ′L) as (refer to page 　  4 of the NMCD paper 　　in the reference folder):                                      
                         
          Lu(τ′1 , . . . , τ′L) = sum_from_k=0_to_L(τ′k+1 − τ′k) * {F_hat_from_τ′k_to_τ′k+1(u) * log(F_hat_from_τ′k_to_τ′k+1(u)) +         
  　                                 (1 - F_hat_from_τ′k_to_τ′k+1(u)) * log(1 - F_hat_from_τ′k_to_τ′k+1(u))                
@@ -17,7 +17,7 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
    where F_hat_from_τ′k_to_τ′k+1(u) is the empirical C.D.F. of the subsample {Xτ′k,...,Xτ′k+1 - 1} with Xτ′0 = 1 and Xτ′L+1 = n + 1
    To estimate the change-points 1 < τ′1 < ··· <τ′L ≤ n, we can maximize the log-likelihood above in an integrated form:      
                                     
-             Rn(τ′1, . . . , τ′L) = integration_from_NegativeInfinity_to_PositiveInfinity Lu(τ′1, . . . , τ′L) *　dw(u)　　
+             Rn(τ′1, . . . , τ′L) = integral_from_NegativeInfinity_to_PositiveInfinity Lu(τ′1, . . . , τ′L) *　dw(u)　　
                                                                               
    where w(·) is some positive weight function so that Rn(·) is finite, and theintegral is used to combine all the information across u.                                                                                   
              

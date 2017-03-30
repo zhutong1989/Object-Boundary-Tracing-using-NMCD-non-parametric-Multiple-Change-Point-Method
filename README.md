@@ -3,5 +3,5 @@ Tradition image boundary tracing methods are sensitive to the choice of initial 
 
 
 The folder images lists all the 7 images I tried (before and after object boundary detection)           
-The folder Image Pixel Data lists all the pixel data for the 7 images read from Matlab
+The folder Image Pixel Data lists all the pixel data for the 7 images read from Matlab                
 The folder References lists three papers -- the NMCD method, Intro to Contour Tracing Problem and Boundary Estimation Theories
